@@ -4,10 +4,10 @@ Home automation stack centered on Home Assistant, with Zigbee support and MQTT m
 
 ## Core Components
 
-- **Home Assistant** – Central home automation platform
-- **Zigbee2MQTT** – Zigbee device integration
-- **Mosquitto** – MQTT broker
-- **SLZB-06M** – Zigbee coordinator (Ethernet/PoE capable)
+- **Home Assistant** - Central home automation platform
+- **Zigbee2MQTT** - Zigbee device integration
+- **Mosquitto** - MQTT broker
+- **SLZB-06M** - Zigbee coordinator (Ethernet/PoE capable)
 
 ## Design Notes
 
