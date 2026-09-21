@@ -60,5 +60,6 @@ flowchart TB
 
 - Enhanced monitoring and alerting
 - More formal infrastructure-as-code practices
-- Improved backup verification processes
+- Implement backups
 - Additional documentation of recovery procedures
+- Upgrade NAS, drives and implement RAID
