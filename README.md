@@ -14,10 +14,11 @@ This repository documents the high-level design, technology choices, and operati
 | **Host**              | Single Ubuntu Server |
 | **Container Runtime** | Docker + Docker Compose |
 | **Management**        | Portainer |
+| **Storage**           | Network-attached storage (NAS) in JBOD configuration |
 | **Remote Access**     | WireGuard VPN (wg-easy) + Dynamic DNS (FreeDNS) |
-| **Primary Focus**     | Docker-based service deployment, media management, home automation, and infrastructure management |
+| **Primary Focus**     | Docker-based service deployment, media services, home automation, and infrastructure management |
 
-The lab runs a mix of containerized workloads and native Linux services. The majority of application services are deployed as Docker containers and managed through Portainer.
+The lab runs a mix of containerized workloads and native Linux services. The majority of application services are deployed as Docker containers and managed through Portainer. Media and bulk data are stored on a dedicated NAS using JBOD.
 
 ---
 
@@ -31,12 +32,13 @@ The lab runs a mix of containerized workloads and native Linux services. The maj
 - AdGuard Home
 - Syncthing
 
-**Media & Content**
-- Jellyfin
-- Immich
+**Media Services**
+- Jellyfin (media server)
+- Immich (photo management)
 - Audiobookshelf
 - Booklore
 - RomM
+- Supporting automation and request tools
 
 **Home Automation**
 - Home Assistant
@@ -53,7 +55,7 @@ The lab runs a mix of containerized workloads and native Linux services. The maj
 - Notifiarr
 - Watchtower
 - Homepage / Glance dashboards
-- Crafty Controller (Minecraft)
+- Crafty Controller
 - Termix
 - QDirStat
 - QNAP NAS integration
@@ -66,6 +68,7 @@ The lab runs a mix of containerized workloads and native Linux services. The maj
 - Centralized management via Portainer
 - Secure remote access via WireGuard VPN (no direct exposure of services)
 - Dynamic DNS for reliable remote connectivity
+- Media storage on a dedicated NAS using JBOD for flexible capacity expansion
 - Clear separation of concerns across service categories
 - Infrastructure changes tracked and documented
 
@@ -74,8 +77,7 @@ The lab runs a mix of containerized workloads and native Linux services. The maj
 ## Repository Contents
 
 - [`docs/architecture.md`](docs/architecture.md) – High-level design and component overview
-- [`docs/media-stack.md`](docs/media-stack.md) – Media servers and automation tools
-- [`docs/arr-stack.md`](docs/arr-stack.md) – Download automation (*arr) ecosystem
+- [`docs/media-services.md`](docs/media-services.md) – Media servers and related tools
 - [`docs/networking-access.md`](docs/networking-access.md) – VPN, DNS, and remote access
 - [`docs/home-automation.md`](docs/home-automation.md) – Home Assistant and Zigbee
 - [`docs/management-tools.md`](docs/management-tools.md) – Portainer, monitoring, and utilities
@@ -90,7 +92,8 @@ The lab runs a mix of containerized workloads and native Linux services. The maj
 - Linux systems administration (Ubuntu Server)
 - Secure remote access design (WireGuard + Dynamic DNS)
 - Service orchestration and dependency management
-- Media automation pipelines
+- Integration of Docker workloads with network-attached storage (NAS / JBOD)
+- Self-hosted media platform deployment
 - Home automation integration
 - Documentation and infrastructure organization
 - Troubleshooting and iterative improvement of self-hosted services
