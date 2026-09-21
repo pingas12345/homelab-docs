@@ -50,11 +50,11 @@ flowchart TB
 
 | Category              | Purpose                              | Examples                          |
 |-----------------------|--------------------------------------|-----------------------------------|
-| Media Services        | Personal media and content platform  | Jellyfin, Immich, Audiobookshelf |
-| Home Automation       | Smart home control and integration   | Home Assistant, Zigbee2MQTT      |
-| Networking & Access   | Secure remote connectivity           | WireGuard, AdGuard Home          |
-| Management & Utilities| Operations, monitoring, dashboards   | Portainer, Homepage, NTFY        |
-| AI / Local LLM        | Local large language model access    | Ollama, Open WebUI               |
+| Media Services        | Personal media and content platform  | Jellyfin, Immich, Audiobookshelf  |
+| Home Automation       | Smart home control and integration   | Home Assistant, Zigbee2MQTT       |
+| Networking & Access   | Secure remote connectivity           | WireGuard, AdGuard Home           |
+| Management & Utilities| Operations, monitoring, dashboards   | Portainer, Homepage, NTFY         |
+| AI / Local LLM        | Local large language model access    | Ollama, Open WebUI                |
 
 ## Future Improvements
 
