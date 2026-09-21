@@ -6,11 +6,11 @@ Media files are stored on a dedicated NAS configured in JBOD (Just a Bunch Of Di
 
 ## Core Components
 
-- **Jellyfin** – Media server for video and music
-- **Immich** – High-performance photo and video backup & management
-- **Audiobookshelf** – Audiobook and podcast server
-- **Booklore** – Ebook library management
-- **RomM** – ROM library management
+- **Jellyfin** - Media server for video and music
+- **Immich** - High-performance photo and video backup & management
+- **Audiobookshelf** - Audiobook and podcast server
+- **Booklore** - Ebook library management
+- **RomM** - ROM library management
 
 ## Supporting Tools
 
