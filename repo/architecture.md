@@ -10,22 +10,30 @@
 The lab runs on a single physical host. Application workloads are primarily delivered as Docker containers, while core system services remain native where appropriate.
 
 ## High-Level Design
-┌─────────────────────────────────────────────────────────────┐
-│                     Ubuntu Server Host                      │
-│                                                             │
-│  ┌──────────────┐   ┌──────────────┐   ┌──────────────────┐ │
-│  │   Portainer  │   │  WireGuard   │   │  AdGuard Home    │ │
-│  │  (Management)│   │   (VPN)      │   │  (DNS)           │ │
-│  └──────────────┘   └──────────────┘   └──────────────────┘ │
-│                                                             │
-│  ┌──────────────────────────────────────────────────────┐   │
-│  │              Docker Containers                       │   │
-│  │                                                      │   │
-│  │  Media Services │ Home Automation │ AI │ Utilities   │   │
-│  └──────────────────────────────────────────────────────┘   │
-│                                                             │
-│  Native services + storage (QNAP NAS integration, etc.)     │
-└─────────────────────────────────────────────────────────────┘
+```mermaid
+flowchart TB
+    subgraph Host["Ubuntu Server Host"]
+        direction TB
+        
+        subgraph Core["Core Services"]
+            Portainer["Portainer<br/>(Management)"]
+            WireGuard["WireGuard<br/>(VPN)"]
+            AdGuard["AdGuard Home<br/>(DNS)"]
+        end
+        
+        subgraph Docker["Docker Containers"]
+            Media["Media Services"]
+            Home["Home Automation"]
+            AI["AI"]
+            Utils["Utilities"]
+        end
+        
+        Native["Native services + storage<br/>(QNAP NAS integration, etc.)"]
+        
+        Core --> Docker
+        Docker --> Native
+    end
+```
 
 
 ## Key Design Decisions
