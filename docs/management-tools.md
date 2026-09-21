@@ -14,7 +14,7 @@ Tools used for container management, monitoring, notifications, dashboards, and 
 - **Notifiarr** - Notification and integration helper
 - **Termix** - Web-based server management / terminal access
 - **QDirStat** - Disk usage visualization
-- **Crafty Controller** - Game server management
+- **Crafty Controller** - Minecraft server management
 - **Syncthing** - File synchronization
 - **QNAP NAS** - Network storage integration
 
